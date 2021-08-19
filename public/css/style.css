@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    
+}
+.loader{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #010A43;
+    animation: loader 3s cubic-bezier(0.19, 1, 0.22, 1) 10s both;
+}
+.wrapper{
+    overflow: hidden;
+    box-shadow: #93329E;
+}
+.loadingSun{
+    position: relative;
+    animation: sun 3s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
+ }
+ 
+ .loadingClouds{
+   position: relative;
+    animation: clouds 3s cubic-bezier(0.19, 1, 0.22, 1) 4s both;
+ }
+ .loadingHail{
+     position: relative;
+    animation: hail 3s cubic-bezier(0.19, 1, 0.22, 1) 7s both;
+ }
+
+body
+{
+    padding-left: 1fr;
+    width: 100%;
+    height: 100vh;
+    background-color: #11052C;   
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.head{
+    width: 100%;
+    height: 10%;
+}
+.color
+{
+    color: aqua;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 5px;
+}
+.main{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 8vh;
+    height: 72vh;
+}
+.wave{
+    width: 150%;
+    height: 100%;
+    background-color: skyblue;
+    position: relative;
+    top: 150px;
+    right: 90px;
+    z-index: 1;
+    border-radius: 52% 48% 54% 46% / 69% 31% 69% 31%;
+    animation: waving 3s 1s linear infinite;
+
+}
+.wave-2
+{
+ 
+    position: relative;
+    background-color: lightblue;
+    top: -250px;
+    animation: waving 6s 1s linear infinite;
+}
+.weather
+{
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    width: 20vw;
+    height: 85%;
+    overflow: hidden;
+    border-radius: 20px;
+    /* background-color: cornflowerblue; */
+    box-shadow: 5px 10px 8px 10px black;
+    
+}
+.status{
+    height: 3vh;
+    position: relative;
+    top: 10%;
+    left: 43%;
+    
+
+}
+.icon
+{
+    position: relative;
+    left: -3%;
+    transform: translateZ(20px);
+}
+.temp{
+    display: grid;
+    grid-template-rows: 30px 50px 50px auto;
+    z-index: 1000;
+    position: relative;
+    top: -600px;
+    justify-content: center;
+    align-items: center;
+}
+.temp p
+{
+    color: #4A1C40;
+    font-family: 'Fjalla One', sans-serif;
+}
+@media screen and  (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    .head{
+        width: 100vw;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .weather
+    {
+        display: grid;
+        width: 100vw;
+        height: 120%;
+        /* background-color: cornflowerblue; */
+    }
+    .wave{
+        display: grid;
+        width: 100em;
+        height: 100em;
+        background-color: skyblue;
+        position: relative;
+        left:-40%;
+        top: 15%;
+        z-index: 1;
+        border-radius: 52% 48% 54% 46% / 69% 31% 69% 31%;
+        animation: waving 3s 1s linear infinite;
+}
+    .wave-2
+    {
+        display: grid;
+        position: relative;
+        background-color: lightblue;
+        top: -85%;
+        animation: waving 6s 1s linear infinite;
+    }
+    .status{
+        width: 100vw;
+        position: relative;
+        top: 70%;
+        left: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .temp{
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 30px 50px 50px auto;
+        z-index: 1000;
+        position: relative;
+        top: -2900px;
+        justify-content: center;
+        align-items: center;
+    }
+    .temp p
+    {
+        color: #4A1C40;
+        font-family: 'Fjalla One', sans-serif;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    body{
+        overflow-x: hidden;
+    }
+    .head{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .weather
+    {
+        display: grid;
+        width: 50vw;
+        height: 100%;
+        /* background-color: cornflowerblue; */
+    }
+    .wave{
+        display: grid;
+        width: 100em;
+        height: 100em;
+        background-color: skyblue;
+        position: relative;
+        left:-40%;
+        top: 15%;
+        z-index: 1;
+        border-radius: 52% 48% 54% 46% / 69% 31% 69% 31%;
+        animation: waving 3s 1s linear infinite;
+}
+    .wave-2
+    {
+        display: grid;
+        position: relative;
+        background-color: lightblue;
+        top: -85%;
+        animation: waving 6s 1s linear infinite;
+    }
+    .status{
+        width: 50vw;
+        position: relative;
+        top: 80%;
+        left: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .temp{
+        width: 50vw;
+        display: grid;
+        grid-template-rows: 30px 50px 50px auto;
+        z-index: 1000;
+        position: relative;
+        top: -2950px;
+        justify-content: center;
+        align-items: center;
+    }
+    .temp p
+    {
+        color: #4A1C40;
+        font-family: 'Fjalla One', sans-serif;
+    }
+}
+@media screen and (max-height:600px) {
+    .temp{
+        top: -3000px;
+    }
+}
+@media screen and (min-height:1000px) {
+    .temp{
+        top: -2700px;
+    }
+}
+@keyframes waving {
+    from{
+        transform: rotateZ(0deg);
+    }
+    from{
+        transform: rotateZ(360deg);
+    }
+   
+}
+@keyframes sun {
+    0%{
+        top: -20vh;
+    }
+    50%{
+    
+        top: 13vh;
+       animation-play-state: paused;
+    }
+    100%{
+        top: 50vh;
+    }
+}
+@keyframes clouds{
+    0%{
+        left: -120%;
+    }
+    50%{
+        left: 0%;
+       animation-play-state: paused;
+    }
+    100%{
+        left: 120%;
+    }
+}
+@keyframes hail{
+    0%{
+        bottom: -18vh;
+    }
+    50%{
+        bottom: 13vh;
+       animation-play-state: paused;
+    }
+    100%{
+        bottom: 50vh;
+    }
+}
+@keyframes loader{
+   from{
+    transform: translateX(0vw);
+   }
+   to{
+    transform: translateX(100vw);
+   }
+}
+
