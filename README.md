@@ -3,6 +3,6 @@ A dynamic weather app is a web app that uses the Open Weather API to fetch real-
 
 Here are some of the benefits of using a dynamic weather app:
 
-It can be used to get the latest weather information for any location in the world.
-It can be customized to display the weather information in a variety of ways.
-It can be used to track the weather over time.
+- It can be used to get the latest weather information for any location in the world.
+- It can be customized to display the weather information in a variety of ways.
+- It can be used to track the weather over time.
